@@ -54,7 +54,6 @@ export default function About() {
               sizes="(max-width: 768px) 100vw, 380px"
               style={{ objectFit: "cover", objectPosition: "center top" }}
             />
-            {/* Gradient overlay */}
             <div
               style={{
                 position: "absolute", bottom: 0, left: 0, right: 0,

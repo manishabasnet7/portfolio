@@ -17,7 +17,6 @@
   --color-red:     #ef4444;
 }
 
-/* ── Base ───────────────────────────────────────── */
 html { scroll-behavior: smooth; }
 
 body {
@@ -30,7 +29,6 @@ body {
 ::-webkit-scrollbar-track { background: #14120c; }
 ::-webkit-scrollbar-thumb { background: #d4a030; border-radius: 2px; }
 
-/* ── Gradient text ──────────────────────────────── */
 .g-text {
   background: linear-gradient(135deg, #d4a030, #ecc050);
   -webkit-background-clip: text;
@@ -38,14 +36,12 @@ body {
   background-clip: text;
 }
 
-/* ── Card ───────────────────────────────────────── */
 .card {
   background: #252218;
   border: 1px solid #363020;
   border-radius: 16px;
 }
 
-/* ── Section label ──────────────────────────────── */
 .sec-label {
   display: inline-flex;
   align-items: center;
@@ -66,7 +62,6 @@ body {
   flex-shrink: 0;
 }
 
-/* ── Animations ─────────────────────────────────── */
 @keyframes blink       { 0%,100%{opacity:1} 50%{opacity:0} }
 @keyframes pulse-dot   { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.35;transform:scale(.6)} }
 @keyframes spin-border { to { transform: rotate(360deg); } }
@@ -81,7 +76,6 @@ body {
 .pulse-dot  { animation: pulse-dot 2s ease-in-out infinite; }
 .spin-el    { animation: spin-it 0.7s linear infinite; }
 
-/* ── Scroll reveal ──────────────────────────────── */
 .reveal {
   opacity: 0;
   transform: translateY(24px);
@@ -89,20 +83,17 @@ body {
 }
 .reveal.in { opacity: 1; transform: none; }
 
-/* ── Section divider ────────────────────────────── */
 .gold-line {
   height: 1px;
   background: linear-gradient(90deg, transparent, rgba(212,160,48,.35) 40%, rgba(236,192,80,.35) 60%, transparent);
 }
 
-/* ── Profile photo ring ─────────────────────────── */
 .photo-ring {
   position: relative;
   display: inline-block;
   border-radius: 50%;
 }
 
-/* ── Scroll progress bar ────────────────────────── */
 #scroll-progress {
   position: fixed;
   top: 0; left: 0;

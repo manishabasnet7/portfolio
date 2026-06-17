@@ -6,7 +6,6 @@ export default function CVButton() {
 
   return (
     <>
-      {/* Floating button */}
       <button
         onClick={() => setOpen(true)}
         className="fixed right-5 top-1/2 -translate-y-1/2 z-40 flex flex-col items-center gap-1.5 px-3 py-4 rounded-xl transition-all duration-200 hover:-translate-y-[calc(50%-2px)]"
@@ -42,7 +41,6 @@ export default function CVButton() {
         </span>
       </button>
 
-      {/* Modal overlay */}
       {open && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center p-4"
@@ -60,7 +58,6 @@ export default function CVButton() {
               overflow: "hidden",
             }}
           >
-            {/* Modal header */}
             <div
               className="flex items-center justify-between px-5 py-3.5 flex-shrink-0"
               style={{ borderBottom: "1px solid #2a2a34" }}
@@ -95,7 +92,6 @@ export default function CVButton() {
               </div>
             </div>
 
-            {/* PDF iframe */}
             <iframe
               src="/manisha-cv.pdf"
               title="Manisha Basnet CV"

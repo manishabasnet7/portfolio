@@ -67,7 +67,6 @@ export default function Hero() {
       <div className="max-w-6xl mx-auto w-full px-6 md:px-14 py-20">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-16 items-center">
 
-          {/* Left — text */}
           <div>
             <div
               className="inline-flex items-center gap-2.5 mb-10 text-xs font-semibold tracking-widest uppercase"
@@ -165,7 +164,6 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right — profile photo */}
           <div className="hidden lg:flex items-center justify-center">
             <div style={{ position: "relative", width: 300, height: 300 }}>
               <div
