@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://manisha-basnet.com.np/sitemap.xml
