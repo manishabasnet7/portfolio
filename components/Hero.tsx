@@ -65,7 +65,7 @@ export default function Hero() {
   return (
     <section id="home" className="relative z-10 min-h-screen flex flex-col justify-center" style={{ paddingTop: 80 }}>
       <div className="max-w-6xl mx-auto w-full px-6 md:px-14 py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-10 lg:gap-16 items-center">
 
           <div>
             <div
@@ -164,8 +164,8 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="hidden lg:flex items-center justify-center">
-            <div style={{ position: "relative", width: 300, height: 300 }}>
+          <div className="flex items-center justify-center order-first lg:order-last p-6">
+            <div className="relative w-[190px] h-[190px] lg:w-[300px] lg:h-[300px]">
               <div
                 style={{
                   position: "absolute", inset: -3, borderRadius: "50%",
@@ -184,13 +184,6 @@ export default function Hero() {
                   position: "absolute", inset: 6,
                   width: "calc(100% - 12px)", height: "calc(100% - 12px)",
                   borderRadius: "50%", objectFit: "cover", objectPosition: "center top",
-                }}
-              />
-              <div
-                style={{
-                  position: "absolute", inset: -24, borderRadius: "50%",
-                  background: "radial-gradient(circle, rgba(212,160,48,.18) 0%, transparent 70%)",
-                  pointerEvents: "none",
                 }}
               />
             </div>
