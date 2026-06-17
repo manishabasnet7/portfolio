@@ -1,26 +1,113 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --font-inter:    var(--font-inter);
+  --font-grotesk:  var(--font-grotesk);
+
+  --color-bg:      #14120c;
+  --color-surface: #1e1b12;
+  --color-card:    #252218;
+  --color-border:  #363020;
+  --color-acc:     #d4a030;
+  --color-acc-lt:  #ecc050;
+  --color-txt:     #faf5e8;
+  --color-txt2:    #c4a878;
+  --color-txt3:    #7a6848;
+  --color-grn:     #22c55e;
+  --color-red:     #ef4444;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/* ── Base ───────────────────────────────────────── */
+html { scroll-behavior: smooth; }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #14120c;
+  color: #faf5e8;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #14120c; }
+::-webkit-scrollbar-thumb { background: #d4a030; border-radius: 2px; }
+
+/* ── Gradient text ──────────────────────────────── */
+.g-text {
+  background: linear-gradient(135deg, #d4a030, #ecc050);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Card ───────────────────────────────────────── */
+.card {
+  background: #252218;
+  border: 1px solid #363020;
+  border-radius: 16px;
+}
+
+/* ── Section label ──────────────────────────────── */
+.sec-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #d4a030;
+  margin-bottom: 14px;
+}
+.sec-label::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 1px;
+  background: #d4a030;
+  flex-shrink: 0;
+}
+
+/* ── Animations ─────────────────────────────────── */
+@keyframes blink       { 0%,100%{opacity:1} 50%{opacity:0} }
+@keyframes pulse-dot   { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.35;transform:scale(.6)} }
+@keyframes spin-border { to { transform: rotate(360deg); } }
+@keyframes spin-it     { to { transform: rotate(360deg); } }
+@keyframes float-up    { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
+@keyframes orb-drift   {
+  0%,100% { transform: translateX(-50%) translateY(0); }
+  50%     { transform: translateX(-50%) translateY(-30px); }
+}
+
+.caret      { animation: blink 0.85s step-end infinite; }
+.pulse-dot  { animation: pulse-dot 2s ease-in-out infinite; }
+.spin-el    { animation: spin-it 0.7s linear infinite; }
+
+/* ── Scroll reveal ──────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.in { opacity: 1; transform: none; }
+
+/* ── Section divider ────────────────────────────── */
+.gold-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212,160,48,.35) 40%, rgba(236,192,80,.35) 60%, transparent);
+}
+
+/* ── Profile photo ring ─────────────────────────── */
+.photo-ring {
+  position: relative;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+/* ── Scroll progress bar ────────────────────────── */
+#scroll-progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #d4a030, #ecc050, #f5d06e);
+  z-index: 9999;
+  transition: width 0.1s linear;
 }
