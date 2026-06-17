@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     "Job Seeker Nepal",
     "Tribhuvan University BBS",
   ],
-  authors: [{ name: "Manisha Basnet", url: "https://manishabasnet.com.np" }],
+  authors: [{ name: "Manisha Basnet", url: "https://manisha-basnet.com.np" }],
   creator: "Manisha Basnet",
   robots: {
     index: true,
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     description:
       "2.5+ years as a Samsung Experience Consultant in Gorkha, Nepal. Specialist in product consultation, sales achievement, and customer experience.",
     siteName: "Manisha Basnet Portfolio",
-    url: "https://manishabasnet.com.np",
+    url: "https://manisha-basnet.com.np",
     images: [
       {
         url: "/opengraph-image.png",
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
-  metadataBase: new URL("https://manishabasnet.com.np"),
+  metadataBase: new URL("https://manisha-basnet.com.np"),
 };
 
 export default function RootLayout({
@@ -73,7 +73,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
       <head>
-        <link rel="canonical" href="https://manishabasnet.com.np" />
+        <link rel="canonical" href="https://manisha-basnet.com.np" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#14120c" />
         <script
@@ -83,7 +83,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Person",
               name: "Manisha Basnet",
-              url: "https://manishabasnet.com.np",
+              url: "https://manisha-basnet.com.np",
               jobTitle: "Samsung Experience Consultant",
               worksFor: { "@type": "Organization", name: "Samsung Nepal" },
               address: {

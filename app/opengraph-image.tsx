@@ -77,7 +77,7 @@ export default function OGImage() {
           position: "absolute", bottom: 48, right: 80,
           fontSize: 16, color: "#7a6848", display: "flex",
         }}>
-          manishabasnet.com.np
+          manisha-basnet.com.np
         </div>
       </div>
     ),
